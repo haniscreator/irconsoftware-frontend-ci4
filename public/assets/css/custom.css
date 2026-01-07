@@ -1,0 +1,780 @@
+/* =========================================================
+   Base Styles
+========================================================= */
+
+/* =========================================================
+   Fonts
+========================================================= */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham Regular/Gotham Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham Medium/Gotham Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham Bold/Gotham Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham Light/Gotham Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/Gotham Extra Light/Gotham Extra Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+:root {
+    /* Colors */
+    --color-bg-dark: #1b0f22;
+    --color-bg-mid: #2a1333;
+    --color-bg-light: #523166;
+    --color-bg-deep-purple: #2C0F29;
+    --color-bg-darker-purple: #140a18;
+    --color-bg-section-mid: #3B1A46;
+    --color-bg-section-alt: #2D0F2B;
+    --color-bg-section-alt-dark: #280D25;
+    --color-bg-section-bottom: #260B25;
+
+    --color-primary: #f03b6e;
+    --color-primary-hover: #f25581;
+    --color-pink-muted: #C6AAC6;
+    --color-pink-dark: #8F618F;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #c7b6d2;
+    --color-text-faint: rgba(255, 255, 255, 0.7);
+    --color-text-dark-purple: #523166;
+
+    /* Gradients */
+    --gradient-signup: linear-gradient(90deg, #8E608E 28.16%, #402640 67.82%, #371A34 83.75%);
+
+    /* Spacing */
+    --section-padding-top: 6rem;
+    --section-padding-bottom: 6rem;
+    --section-padding-sm: 4rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Shadow */
+    --shadow-btn: 0 4px 6px rgba(240, 59, 110, 0.1);
+    --shadow-btn-hover: 0 6px 15px rgba(240, 59, 110, 0.3);
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================
+   Hero Stack (Header + Hero + CTA)
+========================================================= */
+
+.hero-stack {
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================================================
+   Navbar
+========================================================= */
+
+.site-header {
+    background: var(--color-bg-deep-purple);
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    padding: 0.75rem 0;
+}
+
+.nav-logo {
+    height: 28px;
+}
+
+.nav-left-group {
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+    padding: 0.5rem 1.5rem;
+    transition: color var(--transition-fast);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Desktop hover dropdown */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    margin-top: 0.5rem;
+    min-width: 180px;
+    background-color: var(--color-bg-mid);
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+    padding: 0.5rem 1.5rem;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+/* =========================================================
+   Hero Section
+========================================================= */
+
+.hero-section {
+    position: relative;
+    z-index: 2;
+    padding: var(--section-padding-top) 0 4rem;
+    background: linear-gradient(180deg, var(--color-bg-deep-purple) 0%, var(--color-bg-dark) 100%);
+}
+
+.hero-eyebrow {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.product-brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--color-text-main);
+    margin-bottom: 1rem !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.product-logo {
+    margin-right: 0.25rem !important;
+}
+
+.product-brand .text-pink {
+    color: var(--color-primary);
+}
+
+.product-brand small {
+    font-weight: 300;
+    font-size: 0.85em;
+    opacity: 0.9;
+    margin-left: 0.4rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.0;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.hero-title .title-main {
+    color: var(--color-text-main);
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 0;
+}
+
+.hero-title .title-sub {
+    color: var(--color-pink-muted);
+    font-size: 2.8rem;
+    font-weight: 700;
+    display: block;
+    margin-top: -25px;
+    line-height: 0.9;
+}
+
+.coming-soon-text {
+    font-size: 1rem;
+    color: var(--color-pink-dark);
+    margin-top: 1.5rem;
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   Hero Decorative Image (KEY FIX)
+========================================================= */
+
+.hero-image {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    /* Adjusted position for smaller size */
+    width: 650px;
+    /* Reduced size from 780px */
+    max-width: none;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* =========================================================
+   Signup Section (Hero)
+========================================================= */
+
+.signup-section {
+    background-color: var(--color-bg-light);
+    padding: 3.5rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.signup-section--hero {
+    background: var(--gradient-signup);
+    padding-top: 2rem;
+    margin-top: -3.5rem;
+}
+
+.signup-section--bottom {
+    background-color: var(--color-bg-mid);
+}
+
+.signup-box h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.signup-box p {
+    color: var(--color-text-main);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.signup-input-wrapper {
+    position: relative;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.signup-form .form-control {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #333;
+    width: calc(100% - 160px);
+}
+
+.signup-form .form-control::placeholder {
+    color: #999;
+}
+
+.signup-form .form-control:focus {
+    box-shadow: none;
+}
+
+.signup-form .btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 999px;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    transition: all var(--transition-smooth);
+    box-shadow: var(--shadow-btn);
+    overflow: hidden;
+}
+
+.signup-form .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.signup-form .btn:hover::after {
+    left: 200%;
+    transition: left 0.6s ease-in-out;
+}
+
+.signup-form .btn i {
+    transition: transform var(--transition-base);
+    position: relative;
+    z-index: 2;
+}
+
+.signup-form .btn:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-btn-hover);
+    color: #fff;
+}
+
+.signup-form .btn:active {
+    transform: translateY(0);
+}
+
+.signup-form .btn:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   Content Sections
+========================================================= */
+
+.product-overview {
+    padding: var(--section-padding-top) 0 0;
+    background-color: var(--color-bg-section-alt);
+    color: var(--color-text-main);
+}
+
+.overview-description-wrap {
+    background-color: var(--color-bg-section-alt-dark);
+    padding: 3rem 0 var(--section-padding-bottom);
+}
+
+.product-overview-title-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.product-overview .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.coming-soon-sticker {
+    position: absolute;
+    top: -22px;
+    right: -38px;
+    width: 70px;
+    transform: rotate(15deg);
+}
+
+.feature-horizontal-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.feature-hash {
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.feature-separator {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+}
+
+.overview-description {
+    max-width: none;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    text-align: left;
+    font-weight: 300;
+}
+
+.overview-description p {
+    margin-bottom: 1.5rem;
+}
+
+.overview-description strong {
+    font-weight: 700;
+}
+
+
+.why-cpp {
+    padding: 4rem 0;
+    background-color: var(--color-bg-section-mid);
+}
+
+.why-cpp .section-title {
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.why-cpp .text-highlight {
+    color: var(--color-pink-muted);
+}
+
+.why-cpp .section-content p {
+    font-weight: 300;
+}
+
+.conversion-graphic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon-html-wrap {
+    position: relative;
+    z-index: 10;
+    top: -20px;
+    margin-right: -45px;
+}
+
+.icon-pdf-wrap {
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    margin-left: -45px;
+}
+
+.icon-html,
+.icon-pdf {
+    width: 140px;
+    height: auto;
+}
+
+.icon-html-wrap::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(240, 59, 110, 0.4) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.conversion-arrow-svg {
+    position: relative;
+    width: 120px;
+    height: auto;
+    z-index: 5;
+}
+
+
+.early-access {
+    padding: var(--section-padding-top) 0;
+    background-color: var(--color-bg-deep-purple);
+}
+
+.early-access .section-title {
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+.early-access .text-highlight {
+    color: var(--color-pink-muted);
+}
+
+.early-access-intro {
+    max-width: none;
+    margin: 0 0 3rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.7;
+    font-weight: 300;
+    text-align: left;
+}
+
+.access-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.access-card {
+    background: rgba(16, 8, 20, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 0.75rem 2rem 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.access-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.access-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: var(--shadow-card);
+}
+
+.access-card:hover::after {
+    left: 200%;
+    transition: left 0.8s ease-in-out;
+}
+
+.access-card:active {
+    transform: translateY(-2px);
+}
+
+.card-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+}
+
+.card-badge.released {
+    background-color: var(--color-pink-muted);
+    color: var(--color-text-dark-purple);
+}
+
+.card-badge.coming-soon {
+    background-color: var(--color-bg-section-mid);
+    color: var(--color-text-main);
+    opacity: 0.5;
+}
+
+.card-product-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-pink-muted);
+}
+
+.card-brand {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.card-brand strong {
+    font-weight: 700;
+}
+
+.card-for {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.signup-section--bottom {
+    padding: var(--section-padding-sm) 0;
+    background-color: var(--color-bg-section-bottom);
+}
+
+.signup-section--bottom .section-title {
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.signup-section--bottom .text-highlight {
+    color: var(--color-pink-muted);
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.signup-note {
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    font-weight: 200;
+}
+
+.site-footer {
+    padding: 1.5rem 0;
+    background-color: var(--color-bg-darker-purple);
+    color: var(--color-text-muted);
+}
+
+.badge-coming-soon {
+    background-color: var(--color-pink-muted);
+    color: var(--color-text-dark-purple);
+    font-weight: 300;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    margin-right: 0.75rem;
+    text-transform: none;
+    border: none;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 991px) {
+    .hero-image {
+        position: static;
+        width: 320px;
+        margin: 2rem auto 0;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 4rem 0 2rem;
+    }
+
+    .coming-soon-text {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .signup-input-wrapper {
+        background: transparent;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .signup-form .form-control {
+        width: 100%;
+        background: #fff;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .signup-form .btn {
+        position: static;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 999px;
+    }
+
+    .feature-horizontal-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .feature-separator {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.2rem !important;
+    }
+
+    .coming-soon-sticker {
+        width: 50px;
+        top: -15px;
+        right: -15px;
+    }
+
+    .conversion-graphic {
+        margin-bottom: 3rem;
+        transform: scale(0.85);
+    }
+
+    .access-card {
+        width: 100%;
+        justify-content: center;
+        padding-right: 1rem;
+    }
+
+    .signup-section--bottom {
+        padding: 5rem 0;
+    }
+}
+/* Success Modal Animation */
+@keyframes floatPaperPlane {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.animate-paper-plane {
+    animation: floatPaperPlane 3s ease-in-out infinite;
+}

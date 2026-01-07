@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "product_name_prefix": "IRON",
+    "product_name_highlight": "PDF",
+    "product_name_suffix": "for C++",
+    "eyebrow": "Building on the success of IronPDF for .NET",
+    "title_main": "Beta Software Program",
+    "title_sub": "IronPDF for C++",
+    "coming_soon": "Coming soon",
+    "coming_soon_others_intro": "IronPDF Beta Program also coming soon for",
+    "coming_soon_others": [
+      "Python",
+      "Node.JS",
+      "Java"
+    ]
+  },
+  "signup_hero": {
+    "title": "Be one of the first",
+    "subtitle": "Sign up NOW to get early access!",
+    "button_text": "Sign up now"
+  },
+  "product_overview": {
+    "title": "IronPDF for C++",
+    "features": [
+      "Generate PDFs from HTML in C++",
+      "Combine, split, and modify PDFs quickly in C++",
+      "Extract text and images from PDFs using C++"
+    ],
+    "description_p1_strong": "IronPDF library for C++",
+    "description_p1": "The new %s will enhance the C++ developer’s tool set with robust PDF generation and conversion capabilities. Developers will be able to generate new PDFs from HTML content (from text or from URL), as well as to combine, split, extract, and modify content from existing PDFs.",
+    "description_p2_strong": "IronPDF for C++",
+    "description_p2": "%s will help developers create C++ applications that can do all of these PDF processing tasks and more, with speed, precision, control, and excellence."
+  },
+  "why_cpp": {
+    "title_prefix": "Why make a",
+    "title_highlight": "C++ PDF Library",
+    "p1": "C++ is one of the most popular, oldest, and important programming languages in use, being the language of choice in low-level systems and network programming and other domains where performance is critical.",
+    "p2_strong": "IronPDF for C++",
+    "p2": "The release of %s will aid developers in building performant applications that can carry out PDF-related processing tasks."
+  },
+  "early_access": {
+    "title_prefix": "Early Access to",
+    "title_highlight": "C++ PDF Library",
+    "intro": "Joining the early access program will allow you to collaborate closely with our engineering team. You will be playing a key role in the development process as you share your early experiences using the C++ PDF library before its official launch. Your continual feedback after we release the library will be immensely helpful as we release new features and improve on existing features.",
+    "cards": [
+      {
+        "badge": "# Released",
+        "badge_class": "released",
+        "prod_prefix": "IRON",
+        "prod_main": "PDF",
+        "for": "for Java"
+      },
+      {
+        "badge": "# Coming Soon",
+        "badge_class": "coming-soon",
+        "prod_prefix": "IRON",
+        "prod_main": "PDF",
+        "for": "for Python"
+      },
+      {
+        "badge": "# Coming Soon",
+        "badge_class": "coming-soon",
+        "prod_prefix": "IRON",
+        "prod_main": "PDF",
+        "for": "for NodeJS"
+      }
+    ]
+  },
+  "signup_bottom": {
+    "title_prefix": "Sign up to our",
+    "title_highlight": "Beta Program",
+    "button_text": "Sign up now"
+  }
+}
